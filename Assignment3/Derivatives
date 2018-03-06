@@ -1,0 +1,8 @@
+$\class{steps-node}{\cssId{steps-node-1}{\tfrac{\mathrm{d}}{\mathrm{d}a}\left[\dfrac{1}{\mathrm{e}^{-a}+1}\right]}}$
+$=-\dfrac{\class{steps-node}{\cssId{steps-node-3}{\tfrac{\mathrm{d}}{\mathrm{d}a}\left[\mathrm{e}^{-a}+1\right]}}}{\class{steps-node}{\cssId{steps-node-2}{\left(\mathrm{e}^{-a}+1\right)^2}}}$
+$=-\dfrac{\class{steps-node}{\cssId{steps-node-4}{\class{steps-node}{\cssId{steps-node-6}{\tfrac{\mathrm{d}}{\mathrm{d}a}\left[\mathrm{e}^{-a}\right]}}+\class{steps-node}{\cssId{steps-node-5}{\tfrac{\mathrm{d}}{\mathrm{d}a}\left[1\right]}}}}}{\left(\mathrm{e}^{-a}+1\right)^2}$
+$=-\dfrac{\class{steps-node}{\cssId{steps-node-7}{\mathrm{e}^{-a}}}\cdot\class{steps-node}{\cssId{steps-node-8}{\tfrac{\mathrm{d}}{\mathrm{d}a}\left[-a\right]}}+\class{steps-node}{\cssId{steps-node-9}{0}}}{\left(\mathrm{e}^{-a}+1\right)^2}$
+$=-\dfrac{\class{steps-node}{\cssId{steps-node-10}{\left(-\class{steps-node}{\cssId{steps-node-11}{\tfrac{\mathrm{d}}{\mathrm{d}a}\left[a\right]}}\right)}}\mathrm{e}^{-a}}{\left(\mathrm{e}^{-a}+1\right)^2}$
+$=\dfrac{\class{steps-node}{\cssId{steps-node-12}{1}}\mathrm{e}^{-a}}{\left(\mathrm{e}^{-a}+1\right)^2}$
+$=\dfrac{\mathrm{e}^{-a}}{\left(\mathrm{e}^{-a}+1\right)^2}$ =
+$\dfrac{\mathrm{e}^a}{\left(\mathrm{e}^a+1\right)^2}$
