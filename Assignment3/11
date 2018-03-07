@@ -1,0 +1,41 @@
+def cross_entropy(Y, T):
+    if Y == 0:
+        Y = 0.00000000000001
+    L = (1/N)* np.sum((-T*np.log(Y)-(1-T)*np.log(1-Y)))
+    
+    """
+    Computes the cross-entropy loss.
+    INPUT:
+        Y = [1 N] output vector for N examples
+        T = [1 N] target vector for N examples
+    OUTPUTS
+        L = [1 1] the mean cross-entropy loss
+    """
+    return L
+
+
+
+def sigmoid(A):
+    A = (1/(1+np.exp(-A)))
+    """
+    Computes the sigmoid activation function.
+    INPUT:
+        A = [K N] activity matrix of K units for N examples
+    OUTPUT
+        Y = [K N] output matrix of K units for N examples
+    """
+    return Y
+    
+    
+    def linear(X, W):
+    """
+    Computes the activities for a fully connected layer.
+    INPUT:
+        X = [P N] data matrix of P input units for N examples
+        W = [Q P] weight matrix of P inputs to Q outputs
+    OUTPUT
+        A = [Q N] activity matrix of Q output units for N examples
+    """
+    ###  Add your code here. ###
+    A= W0+ W[N]*X[N]
+    return A
