@@ -1,0 +1,51 @@
+def train_network(X_train, T_train, X_val, T_val, n_epochs=100, eta=0.001):
+    """
+    Performs the training procedure for a one-layer network with sigmoid units and cross-entropy loss.
+    INPUT:
+        X_train  = [P N] data matrix of P inputs for N training examples
+        T_train  = [1 N] a vector of targets for N training examples 
+                   (labels for digits 0 or 1; given as numbers 0 or 1)
+        X_val    = [P M] data matrix of P inputs for N training examples
+        T_val    = [1 M] a vector of targets for N training examples
+        n_epochs = [1 1] number of training epochs (default 100)
+        eta      = [1 1] learning rate (default 0.001)
+    OUTPUT:
+        W          = [1 P] the learned weights of P inputs to 1 outputs
+        train_loss = [Z 1] the training loss for Z epochs
+        val_loss   = [Z 1] the validation loss for Z epochs
+    """
+    
+    # Weight initialization
+    W = np.random.randn(1, X.shape[0])
+    
+    # Arrays for saving losses
+    train_loss = np.zeros((n_epochs))
+    val_loss = np.zeros((n_epochs))
+
+    # Loop over epochs
+    for i_epoch in xrange(n_epochs):
+        
+        # Forward pass for current network (i.e. with current W)
+        # (obtaining Y_train)
+        Y_train = forward(X_train, W)
+        Y_val = forward(X_val, W)
+        
+        # Backward pass
+        # (obtaining dW)
+        dW = backward(X_train, Y_train, T_train)
+        
+        # Parameter update
+        # (adjusting W with given learning rate)
+        W = W-(eta*dW)
+        
+        # Save losses for train and validation set (compute with cross entropy loss function)
+        train_loss[i_epoch] = cross_entropy(Y_train, T_train)
+        val_loss[i_epoch] = cross_entropy(Y_val, T_val)
+        
+        # Print progress and loss
+        if i_epoch % 10 == 0:
+            print "train_loss shape: ", train_loss.shape
+            print("Epoch {}/{}. Train loss: {}. Validation loss: {}.".format(
+                1+i_epoch, n_epochs, train_loss[i_epoch], val_loss[i_epoch]))
+        
+    return W, train_loss, val_loss
