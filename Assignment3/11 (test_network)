@@ -1,0 +1,12 @@
+def test_network(X, W):
+    """
+    Applies the trained one-layer network with sigmoid units to classify data.
+    INPUT:
+        X = [P N] data matrix of P inputs for N examples
+        W = [1 P] weight matrix of P inputs to 1 output
+    OUTPUT
+        Y = [1 N] output vector (i.e., predicted labels) for N examples
+    """
+    Y = forward(X, W)
+    Y = Y >= 0.5
+    return Y
