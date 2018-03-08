@@ -1,0 +1,10 @@
+# Train network
+W, train_loss, val_loss = train_network(X_train, T_train, X_val, T_val)
+
+# Plot losses
+plt.plot(range(0, len(train_loss)), train_loss, label='loss of training set')
+plt.plot(range(0, len(train_loss)), val_loss, label='loss of validation set')
+plt.legend()
+plt.xlabel('loss')
+plt.ylabel('epoch')
+plt.show()
