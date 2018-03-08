@@ -1,0 +1,10 @@
+# Test network
+from sklearn.metrics import accuracy_score
+
+Y = test_network(X_test, W)
+Y =  Y.flatten()
+T = T_test.flatten()
+
+#calculate accuracy
+acc = accuracy_score(T, Y, normalize=False)
+float(acc)/len(Y)
