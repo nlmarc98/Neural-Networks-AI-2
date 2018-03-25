@@ -1,0 +1,5 @@
+    dW2 = np.dot((Y-T),H.T)
+    dW1A = np.dot((Y-T).T,W2)
+    dW1B = dW1A.T*H*(1-H)
+    dW1 = np.dot(dW1B, X.T)  
+    return dW1, dW2
